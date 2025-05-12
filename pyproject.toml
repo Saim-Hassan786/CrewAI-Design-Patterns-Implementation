@@ -1,0 +1,27 @@
+[project]
+name = "my-03-uv"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Saim-Hassan786", email = "saimaiengineer@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "crewai>=0.100.1",
+    "litellm>=1.59.8",
+]
+
+[project.scripts]
+my-03-uv = "my_03_uv:main"
+my-design = "my_03_uv.main:kickoff"
+litellm-chain = "my_03_uv.litellm:kickoff_1"
+router = "my_03_uv.router:kickoff_2"
+parallel = "my_03_uv.parallelization:run_it"
+parallel3 = "my_03_uv.Translation:run_it_3"
+essay = "my_03_uv.Essay:write_essay"
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
